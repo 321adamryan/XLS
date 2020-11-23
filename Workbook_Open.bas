@@ -1,16 +1,29 @@
 Private Sub Workbook_Open()
 
+Dim YellowBrickRoad As String
+Dim ahickey As String
+
 
 'save file in ThisWorkbook
+ahickey = "Master Inventory File_IsOpen.xlsx"
+YellowBrickRoad = ThisWorkbook.Path & "\" & ahickey
 
 
-    Workbooks.Add.SaveAs Filename:="E:\Dropbox\WAREHOUSE\Master Inventory File_Open.xlsx"
-    Workbooks("Master Inventory File_Open.xlsx").Close SaveChanges:=False
+    Workbooks.Add.SaveAs Filename:=YellowBrickRoad
+    Workbooks("Master Inventory File_IsOpen.xlsx").Close SaveChanges:=False
     
 End Sub
 
 
 Private Sub Workbook_BeforeClose(Cancel As Boolean)
 
-Kill "E:\Dropbox\WAREHOUSE\Master Inventory File_Open.xlsx"
+Dim YellowBrickRoad As String
+Dim ahickey As String
+
+ahickey = "Master Inventory File_IsOpen.xlsx"
+YellowBrickRoad = ThisWorkbook.Path & "\" & ahickey
+Kill YellowBrickRoad
 End Sub
+
+
+
