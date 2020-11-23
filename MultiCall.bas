@@ -1,21 +1,19 @@
-Attribute VB_Name = "MultiCall"
+﻿Attribute VB_Name = "MultiCall"
 Sub MultiCall()
     
-    Call CATCheck
-    Call JPGCheck
-    Call PNGCheck
-    Call PSDCheck
-    Call R23PCheck
-    Call RAWCheck
-    Call ZIPCheck
-
+    Call APFinder
+    Call DPFinder
+    Call FOFinder
+    Call MILFinder
+    Call OHPFinder
+ 
     
 
     
     
-     ThisWorkbook.Sheets("ImageReport").Activate
+     ThisWorkbook.Sheets("Master Inventory List").Activate
 
-    MsgBox "iMAGE Report is Done!"
+    MsgBox "Report is Done!"
     
 err:
     Application.DisplayAlerts = True
